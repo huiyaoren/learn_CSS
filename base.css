@@ -1,0 +1,161 @@
+* {
+    font-family: 'Microsoft Yahei', sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
+html {
+    width: 100%;
+    font-size: 100px;
+}
+
+
+body{
+    width: 100%;
+}
+
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+/* header
+-------------------------------------------------------------------------------*/
+
+.header {
+    height: 80px;
+    text-align: center;
+    font-size: .12rem;
+    background-image: url(img/_0000_图层-85.png);
+}
+
+.header * {
+    vertical-align: middle;
+}
+
+.header_bg {
+    display: none;
+    height: 80px;
+    text-align: center;
+    z-index: -100;
+
+}
+
+.header_empty {
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header_logo {
+    vertical-align: middle;
+	height: 45px;
+}
+
+
+.header_icon1 {
+
+}
+
+
+.header > div {
+    display: inline-block;
+    font-size: .14rem;
+}
+
+
+.header > div > a {
+    border-left: 1px dotted gray;
+    padding-left: 19px;
+    padding-right: 19px;
+    cursor: pointer;
+    color: black;
+}
+
+
+.header > div > a.first {
+    padding-right: 19px;
+    color: white;
+    border: none;
+}
+
+
+.header input {
+    border: gray solid 1px;
+}
+
+
+
+
+.header_search {
+
+}
+
+
+/* banner
+-------------------------------------------------------------------------------*/
+
+.banner{
+    width: 100%;
+}
+
+
+.banner img{
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* container
+-------------------------------------------------------------------------------*/
+.container {
+    width: 52.0833%;
+    margin: 0 auto;
+    text-align: center;
+}
+.container > div {
+    display: inline-block;
+}
+
+.container_login {
+    display: inline-block;
+    background: rgb(252,237,204);
+    border: solid 1px rgb(255,168,73);
+}
+
+.container_login > * {
+    display: block;
+}
+.container_login img {
+
+}
+.container_login h1 {
+    font-size: .2rem;
+    color: rgb(233,133,33);
+}
+.container_login input {
+    border: solid 1px rgb(255,168,73);
+}
+
+
+
+
+.container_banner1 img {
+    width: 100%;
+}
+
+
+
+/* footer
+-------------------------------------------------------------------------------*/
+
+.footer {
+
+}
