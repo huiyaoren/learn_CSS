@@ -446,7 +446,7 @@ body {
 
 }
 
-.container_content_left .student h1{
+.container_content_left .student h1 {
     width: 220px;
     height: 45px;
 
@@ -459,7 +459,8 @@ body {
     line-height: 45px;
     color: #323333;
 }
-.container_content_left .student ul li{
+
+.container_content_left .student ul li {
     width: 225px;
     height: 32px;
 
@@ -590,6 +591,7 @@ body {
 .container_content_right .classic > p > a.first {
     color: #e17f1b;
 }
+
 .container_content_right .classic > img {
     margin-left: 10px;
     margin-right: 10px;
@@ -597,6 +599,7 @@ body {
 
     cursor: pointer;
 }
+
 .container_content_right .classic > a {
     width: 220px;
 
@@ -609,9 +612,6 @@ body {
     font-size: .13rem;
 }
 
-
-
-
 /* container_corp
 -----------------------------------------------------------*/
 .container_corp {
@@ -622,7 +622,49 @@ body {
     margin-top: 16px;
     margin-bottom: 16px;
 
+    text-align: left;
     background: url(img/_0000_图层-1.png);
+}
+
+.container_corp * {
+    display: inline-block;
+}
+
+.container_corp h1 {
+    width: .4rem;
+    height: 70px;
+
+    margin-top: 10px;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    font-size: .20rem;
+    color: #323333;
+    text-align: left;
+    vertical-align: top;
+    font-weight: 500;
+
+}
+
+.container_corp div {
+    height: 48px;
+
+    margin-top: 10px;
+    padding-right: 27px;
+    padding-left: 27px;
+    border-right: solid 1px #e1e1e1;
+    border-top: solid 1px #e1e1e1;
+    border-bottom: solid 1px #e1e1e1;
+
+    vertical-align: middle;
+    background: white;
+}
+
+.container_corp div img {
+}
+
+.container_corp div {
+
 }
 
 /* container_lesson
@@ -642,9 +684,43 @@ body {
 
     border: 1px solid #d8d8d8;
     margin-right: 11px;
+    text-align: left;
 
     vertical-align: top;
 }
+
+
+
+.container_lesson_left h1 {
+    width: 220px;
+    height: 45px;
+
+    border-left: solid 4px #e17e1c;
+    padding-left: 16px;
+
+    font-size: .2rem;
+    font-weight: 500;
+    background: url(img/_0000_图层-1.png);
+    line-height: 45px;
+    color: #323333;
+}
+
+.container_lesson_left ul li {
+    width: 225px;
+    height: 30px;
+
+    border-bottom: dotted 1px #c5c5c5;
+    padding-left: 15px;
+
+    font-size: .12rem;
+    line-height: 30px;
+    color: #555555;
+}
+.container_lesson_left ul li a {
+    font-size: .16rem;
+    text-align: right;
+}
+
 
 .container_lesson_right {
     width: 745px;
@@ -652,6 +728,108 @@ body {
 
     border: 1px solid #d8d8d8;
 
+}
+
+
+
+.container_lesson_right > h1 {
+    width: 186px;
+    height: 50px;
+
+    border-bottom: 4px solid #e17e1b;
+    border-right: solid 1px #e1e1e1;
+    margin-bottom: 5px;
+
+    background: url(img/_0000_图层-1.png);
+    vertical-align: top;
+    font-size: .22rem;
+    color: #e17f1b;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+.container_lesson_right > p {
+    width: 558px;
+    height: 50px;
+
+    border-bottom: 4px solid #cecece;
+
+    vertical-align: top;
+    color: #999899;
+    font-size: .12rem;
+    line-height: 50px;
+    text-align: left;
+}
+
+.container_lesson_right > p > a {
+    width: 96px;
+    height: .14rem;
+    line-height: .14rem;
+
+    border-right: dotted 1px #bbbbba;
+
+    text-align: center;
+    font-size: .14rem;
+    cursor: pointer;
+}
+
+.container_lesson_right > p > a.first {
+    color: #e17f1b;
+}
+.container_lesson_right > div {
+    width: 100%;
+    height: 70px;
+
+    margin-top: 5px;
+
+    text-align: left;
+
+}
+.container_lesson_right > div > img{
+    margin-left: 12px;
+}
+
+
+.container_lesson_right > div > a,
+.container_lesson_right > div > p{
+    background: url(img/_0000_图层-1.png);
+}
+.container_lesson_right > div > span{
+    height: 36px;
+
+    margin-top: 12px;
+    padding-left: 20px;
+    padding-right: 10px;
+
+    position: relative;
+    left: -16px;
+    z-index: -1;
+
+    line-height: 36px;
+    font-size: .20rem;
+    vertical-align: top;
+    color: white;
+
+}
+
+.container_lesson_right > div > a{
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-top: 11px;
+
+    line-height: 38px;
+    vertical-align: top;
+    font-size: .18rem;
+    color: #323333;
+}
+.container_lesson_right > div > p{
+    margin-top: 11px;
+
+
+    line-height: 38px;
+
+    vertical-align: top;
+    font-size: .22rem;
 }
 
 /* container_link
@@ -664,6 +842,10 @@ body {
     border: 1px solid #d8d8d8;
     margin-top: 16px;
     margin-bottom: 16px;
+    text-align: left;
+}
+.container_link * {
+    display: inline-block;
 }
 
 .container_link h1 {
@@ -671,12 +853,22 @@ body {
     height: 100%;
 
     background: #373637;
+    margin-right: 10px;
 
     line-height: 36px;
     font-size: .15rem;
     font-weight: 500;
     color: #ffffff;
+    text-align: center;
 
+}
+.container_link ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: dotted 1px #bcbcbb;
+
+    color: #555555;
+    font-size: .12rem;
 }
 
 /* footer
