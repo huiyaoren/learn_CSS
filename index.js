@@ -1,6 +1,7 @@
 /**
  * Created by wslsh on 2016/4/21.
  */
+/*
 var height= 9,
     width = 9,
     i,j;
@@ -15,3 +16,4 @@ for(i=1;i<=height;i++){
     }
     document.write("<br/>");
 }
+*/
