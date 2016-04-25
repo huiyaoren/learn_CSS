@@ -1,0 +1,72 @@
+* {
+    border: solid 1px gray;
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft Yahei', sans-serif;
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+    width: 100%; /*1600*882*/
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    font-size: 0;
+
+}
+
+/* header
+-------------------------------------------------------------------------------*/
+
+.header {
+    width: 100%;
+    height: 32px;
+
+    border-bottom: solid 1px #dcdcdb;
+
+    background: #eae3e1;
+}
+
+/* container
+-------------------------------------------------------------------------------*/
+
+.container {
+    width: 1000px;
+    height: 500px;
+
+    margin: 0 auto;
+}
+
+.container_title {
+}
+
+.container_nav {
+    width: 100%;
+    height: 40px;
+}
+
+.container_show {
+    width: 100%;
+    height: 326px;
+}
+
+.container_block {
+    height: 180px;
+}
+
+
+/* footer
+-------------------------------------------------------------------------------*/
+
+.footer {
+    height: 90px;
+
+    border-top: #337bb3;
+
+    background: #2370ad;
+}
