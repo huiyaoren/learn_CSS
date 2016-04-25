@@ -16,7 +16,6 @@ body {
 
 .main {
     width: 100%;
-    margin: 0 auto;
     font-size: 0;
 }
 
@@ -784,7 +783,6 @@ body {
     margin-top: 5px;
 
     text-align: left;
-
 }
 
 .container_lesson_right > div > img {
@@ -811,7 +809,6 @@ body {
     font-size: .20rem;
     vertical-align: top;
     color: white;
-
 }
 
 .container_lesson_right > div > a {
@@ -863,7 +860,6 @@ body {
     font-weight: 500;
     color: #ffffff;
     text-align: center;
-
 }
 
 .container_link ul li {
@@ -906,11 +902,10 @@ body {
 
 .footer_left > div {
     margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
 
     text-align: left;
-
 }
 
 .footer_left div > * {
@@ -936,11 +931,10 @@ body {
 /* footer_right
 -----------------------------------------------------------*/
 .footer_right {
-    margin-left: 25px;
+    margin-left: 20px;
 
     font-size: .12rem;
     color: #ababab;
-
 }
 
 .footer_right * {
@@ -948,12 +942,12 @@ body {
 }
 
 .footer_right img {
-    margin-right: 24px;
+    margin-right: 20px;
     margin-top: 77px;
 }
 
 .footer_right ul {
-    width: 150px;
+    width: 125px;
     text-align: left;
 }
 
