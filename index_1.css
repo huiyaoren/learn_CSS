@@ -168,7 +168,30 @@ body {
 .container_show .list .li {
     width: 100%;
     height: 25%;
+
+    cursor: pointer;
+    font-size: .12rem;
 }
+.container_show .list .li:hover{
+    background-color: #ffffff;
+}
+.container_show .list .li img{
+    margin-left: 10px;
+    margin-top: 18px;
+    border: solid 1px #cccccc;
+
+    vertical-align: top;
+}
+.container_show .list .li a{
+    width: 160px;
+
+    margin-top: 20px;
+    margin-left: 5px;
+
+    line-height: 20px;
+    font-weight: 500;
+}
+
 
 .container_block {
     width: 100%;
@@ -221,7 +244,6 @@ body {
 
     border-radius: 7px;
     position: relative;
-    top: px;
     left: 45px;
 
     line-height: 20px;
@@ -255,4 +277,13 @@ body {
     margin-top: 20px;
 
     line-height: 24px;
+}
+.footer a {
+    width: 46px;
+    height: 46px;
+
+
+    position: absolute;
+    top:815px;
+    cursor: pointer;
 }
