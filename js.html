@@ -5,7 +5,29 @@
     <title></title>
     <script src="learn_js.js"></script>
 </head>
-<body>
+<body onload="Table()">
+<form>
+    <table>
+        <tr>
+            <td><input type="text" id="a"><input type="text" id="b"></td>
+            <td></td>
+            <td><input type="button" value="生成表格" onclick="printTable()"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="c"></td>
+            <td></td>
+            <td><input type="button" value="删除行" onclick="deleteRows()"></td>
 
+        </tr>
+        <tr>
+            <td><input type="text" id="d"><input type="text" id="e"></td>
+            <td><input type="text" id="f"></td>
+            <td><input type="button" value="设置表格内容" onclick="setTd()"></td>
+        </tr>
+        <tr></tr>
+    </table>
+
+    <table id="area" border="1px" cellpadding="1px"></table>
+</form>
 </body>
 </html>
