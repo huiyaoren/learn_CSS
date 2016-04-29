@@ -9,25 +9,34 @@
 <form>
     <table>
         <tr>
-            <td><input type="text" id="a"><input type="text" id="b"></td>
+            <td>行</td>
+            <td>列</td>
+            <td>单元格内容</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="a"></td>
+            <td><input type="text" id="b"></td>
             <td></td>
             <td><input type="button" value="生成表格" onclick="printTable()"></td>
         </tr>
         <tr>
             <td><input type="text" id="c"></td>
             <td></td>
+            <td></td>
             <td><input type="button" value="删除行" onclick="deleteRows()"></td>
 
         </tr>
         <tr>
-            <td><input type="text" id="d"><input type="text" id="e"></td>
+            <td><input type="text" id="d"></td>
+            <td><input type="text" id="e"></td>
+
             <td><input type="text" id="f"></td>
             <td><input type="button" value="设置表格内容" onclick="setTd()"></td>
         </tr>
         <tr></tr>
     </table>
 
-    <table id="area" border="1px" cellpadding="1px"></table>
+    <table id="area" border="1px" style="border-collapse: collapse;padding: 8px;"></table>
 </form>
 </body>
 </html>

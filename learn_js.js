@@ -85,20 +85,19 @@ function Lesson() {
 //}
 //printLesson(lesson);
 
-function Table(row, col) {
-    this.row = row;
-    this.col = col;
-    this.print = function () {
-        var col = document.getElementById("a").value;
-        var row = document.getElementById("b").value;
-        //var row = 5;
-        //var col = 5;
 
+// 表格 Table 类
+function Table() {
+    this.row = document.getElementById("a").value;
+    this.col = document.getElementById("b").value;
+    this.print = function () {
         var area = document.getElementById("area");
-        for (var i = 0; i < col; i++) {
+        for (var i = 0; i < this.col; i++) {
             var tr = document.createElement("tr");
-            for (var j = 0; j < row; j++) {
+            for (var j = 0; j < this.row; j++) {
                 var td = document.createElement("td");
+                td.style.width= "50px";
+                td.style.height = "15px"
                 tr.appendChild(td);
             }
             area.appendChild(tr);
@@ -106,24 +105,27 @@ function Table(row, col) {
     }
 }
 
+// 生成表格
 function printTable() {
     var tb = new Table();
     tb.print();
 }
 
+
+// 删除表格行
 function deleteRows() {
-    var row = document.getElementById("c").value-1;
+    var row = document.getElementById("c").value - 1;
     //var row = 1;
     var table = document.getElementsByTagName("table")[1];
     var rows = table.getElementsByTagName("tr")[row];
-
     table.removeChild(rows);
-
 }
 
+
+// 设置表格某单元值
 function setTd() {
-    var row = document.getElementById("d").value-1;
-    var col = document.getElementById("e").value-1;
+    var row = document.getElementById("d").value - 1;
+    var col = document.getElementById("e").value - 1;
     var content = document.getElementById("f").value;
     //var row = 1;
     //var col = 1;
@@ -132,5 +134,5 @@ function setTd() {
     var table = document.getElementById("area");
     var rows = table.getElementsByTagName("tr")[row];
     var td = rows.getElementsByTagName("td")[col];
-    td.innerHTML = content;
+    td.innerText = content;
 }
