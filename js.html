@@ -4,39 +4,160 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="learn_js.js"></script>
+    <style>
+
+        a {
+            width: 150px;
+            height: 15px;
+            line-height: 15px;
+            display: inline-block;
+            border: solid 1px;
+            text-align: center;
+            cursor: pointer;
+            vertical-align: top;
+        }
+
+        div {
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        body {
+            width: 100%;
+            display: inline-block;
+        }
+
+        /* */
+        #list_1 a:hover ~ ul,
+        #list_1 ul:hover {
+            display: inline-block;
+            top: 25px;
+            left: 8px;
+            position: absolute;
+        }
+
+        .show_list {
+            display: inline-block;
+            top: 25px;
+            left: 165px;
+            position: absolute;
+        }
+
+        ul {
+            display: none;
+            border: solid 1px;
+            border-top: none;
+            width: 150px;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        li {
+            width: 150px;
+            cursor: pointer;
+            display: inline-block;
+
+        }
+
+        li:hover {
+            cursor: pointer;
+            background: black;
+            color: white;
+        }
+
+        #block {
+            margin-top: 100px;
+        }
+
+        #block_1, #block_2 {
+            width: 150px;
+            height: 150px;
+            border: solid 1px;
+            text-align: center;
+            overflow: hidden;
+            vertical-align: top;
+        }
+
+        #block_1 > div,
+        #block_2 > div {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            border-radius: 75px;
+        }
+
+        #block_1 > p,
+        #block_2 > p {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: -41px;
+            color: black;
+            background-color: rgba(255, 255, 255, .7);
+            vertical-align: top;
+        }
+
+        #block_1 > div:hover ~ p,
+        #block_1 p:hover {
+            top: -170px;
+        }
+
+
+    </style>
+    <script>
+
+        function showList() {
+            var list_2_ul = document.getElementById("list_2").getElementsByTagName("ul")[0];
+            list_2_ul.className = "show_list";
+            list_2_ul.style.display = "inline-block";
+        }
+        function hideList() {
+            var list_2_ul = document.getElementById("list_2").getElementsByTagName("ul")[0];
+            list_2_ul.style.display = "none";
+        }
+        function showDetail(){
+            var block_2_detail = document.getElementById("block_2").getElementsByTagName("p")[0];
+            block_2_detail.style.top = "-170px"
+        }
+        function hideDetail(){
+            var block_2_detail = document.getElementById("block_2").getElementsByTagName("p")[0];
+            block_2_detail.style.top = "-41px"
+        }
+    </script>
 </head>
-<body onload="Table()">
-<form>
-    <table>
-        <tr>
-            <td>行</td>
-            <td>列</td>
-            <td>单元格内容</td>
-        </tr>
-        <tr>
-            <td><input type="text" id="a"></td>
-            <td><input type="text" id="b"></td>
-            <td></td>
-            <td><input type="button" value="生成表格" onclick="printTable()"></td>
-        </tr>
-        <tr>
-            <td><input type="text" id="c"></td>
-            <td></td>
-            <td></td>
-            <td><input type="button" value="删除行" onclick="deleteRows()"></td>
+<body style="font-family: 'Microsoft Yahei', sans-serif">
+<div id="nav" style="width: 100%">
+    <div id="list_1">
+        <a>CSS 下拉菜单</a>
+        <ul>
+            <li>首页</li>
+            <li>首页</li>
+            <li>首页</li>
+            <li>首页</li>
+        </ul>
+    </div>
+    <div id="list_2" onmouseover="showList()" onmouseout="hideList()">
+        <a>JS 下拉菜单</a>
+        <ul>
+            <li>首页</li>
+            <li>首页</li>
+            <li>首页</li>
+            <li>首页</li>
+        </ul>
+    </div>
+</div>
+<div id="block">
+    <div id="block_1">
+        <div></div>
+        <p>标题<br/>不是标题<br/>CSS 效果实现</p>
+    </div>
+    <div id="block_2">
+        <div onmouseover="showDetail()"></div>
+        <p onmouseout="hideDetail()">标题<br/>不是标题<br/>JS 效果实现</p>
+    </div>
+</div>
 
-        </tr>
-        <tr>
-            <td><input type="text" id="d"></td>
-            <td><input type="text" id="e"></td>
-
-            <td><input type="text" id="f"></td>
-            <td><input type="button" value="设置表格内容" onclick="setTd()"></td>
-        </tr>
-        <tr></tr>
-    </table>
-
-    <table id="area" border="1px" style="border-collapse: collapse;padding: 8px;"></table>
-</form>
 </body>
 </html>
