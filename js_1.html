@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    html {
+        font-family: 'Microsoft Yahei', sans-serif;
+    }
+
+    .button_hover {
+        width: 50px;
+        height: 20px;
+        border: solid 1px black;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+
+        background: black;
+        color: white;
+    }
+
+    .button {
+        width: 50px;
+        height: 20px;
+        border: solid 1px black;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    #box img {
+        display: none;
+    }
+</style>
+<script>
+    function changeImg() {
+        var buttons = box.getElementsByTagName("a");
+        setInterval("chooseImg(buttons[0])",500);
+    }
+
+
+    function chooseImg(evt) {
+        var images = box.getElementsByTagName("img");
+        var buttons = box.getElementsByTagName("a");
+        var num = Number(evt.target.innerText) - 1;
+
+        if (evt.target.className == "button") {
+            for (var i = 0; i < images.length; i++) {
+                if (i == num) {
+                    buttons[i].className = "button_hover";
+                    images[i].style.display = "inline-block";
+                }
+                else{
+                    buttons[i].className = "button";
+                    images[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<body onload="changeImg()">
+<div id="box" onmouseover="chooseImg(event)">
+    <img src="http://i0.hdslb.com/u_user/f51850aed7f725c6ea1d6d08a0e2b42e.jpg">
+    <img src="http://i0.hdslb.com/group1/M00/B7/32/oYYBAFcoCvyAZZtIAADGFALQoE8555.jpg">
+    <img src="http://i0.hdslb.com/group1/M00/B7/2B/oYYBAFchdWqANKvhAADSRTExTd8863.jpg">
+    <img src="http://i2.hdslb.com/promote/429e2eeb51fe26c53c2e450bffd0ec14.jpg">
+    <br/>
+    <a class="button">1</a>
+    <a class="button">2</a>
+    <a class="button">3</a>
+    <a class="button">4</a>
+</div>
+</body>
+</html>
