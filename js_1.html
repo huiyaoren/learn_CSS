@@ -33,46 +33,113 @@
     }
 
     #box img {
-        display: none;
+        border: solid 1px black;
+    }
+
+    span {
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        background: rgba(255, 255, 255, .7);
+        position: absolute;
+        top: 110px;
+        cursor: pointer;
+    }
+
+    #left {
+        left: 15px;
+    }
+
+    #right {
+        left: 550px;
     }
 </style>
+
+<body onload="changeImg()">
+<div id="box" onmouseover="chooseImg(event)" >
+    <img src="http://i0.hdslb.com/u_user/f51850aed7f725c6ea1d6d08a0e2b42e.jpg">
+    <br/>
+    <a class="button_hover" onmouseout="changeImg()">1</a>
+    <a class="button" onmouseout="changeImg()">2</a>
+    <a class="button" onmouseout="changeImg()">3</a>
+    <a class="button" onmouseout="changeImg()">4</a>
+    <span id="left" onclick="passImg(event)"></span>
+    <span id="right" onclick="passImg(event)"></span>
+</div>
+</body>
+</html>
 <script>
-    function changeImg() {
-        var buttons = box.getElementsByTagName("a");
-        setInterval("chooseImg(buttons[0])",500);
+    var imgList = [
+        "http://i0.hdslb.com/u_user/f51850aed7f725c6ea1d6d08a0e2b42e.jpg",
+        "http://i0.hdslb.com/group1/M00/B7/32/oYYBAFcoCvyAZZtIAADGFALQoE8555.jpg",
+        "http://i0.hdslb.com/group1/M00/B7/2B/oYYBAFchdWqANKvhAADSRTExTd8863.jpg",
+        "http://i2.hdslb.com/promote/429e2eeb51fe26c53c2e450bffd0ec14.jpg"
+    ];
+
+    function passImg(evt) {
+        var imgIndex = Number(box.getElementsByClassName("button_hover")[0].innerText);
+
+        if (evt.target.id = "left") {
+            clearInterval(imgLoop);
+
+            imgIndex -= 1;
+            if (imgIndex < 1) {
+                imgIndex = 4;
+            }
+            changeImg(imgIndex);
+        }
+        else if (evt.target.id = "right") {
+            clearInterval(imgLoop);
+            imgIndex += 1;
+            if (imgIndex > 4) {
+                imgIndex = 1;
+            }
+            changeImg(imgIndex);
+
+        }
+    }
+    function chooseImg(evt) {
+        if (evt.target.className == "button_hover" || evt.target.className == "button") {
+            var buttons = box.getElementsByTagName("a");
+            var num = Number(evt.target.innerText) - 1;
+            clearInterval(imgLoop);
+            changeImg(num);
+        }
     }
 
+    function changeImg() {
 
-    function chooseImg(evt) {
-        var images = box.getElementsByTagName("img");
+        var imgIndex = Number(box.getElementsByClassName("button_hover")[0].innerText);
+        if (arguments[0] != null) {
+            showImg(arguments[0] + 1);
+            return null;
+        }
+        imgLoop = setInterval(function () {
+
+            if (imgIndex > 4) {
+                imgIndex = 1;
+            }
+            showImg(imgIndex);
+            imgIndex += 1;
+        }, 1000)
+    }
+
+    function showImg(index) {
+        var img = box.getElementsByTagName("img")[0];
         var buttons = box.getElementsByTagName("a");
-        var num = Number(evt.target.innerText) - 1;
 
-        if (evt.target.className == "button") {
-            for (var i = 0; i < images.length; i++) {
-                if (i == num) {
-                    buttons[i].className = "button_hover";
-                    images[i].style.display = "inline-block";
-                }
-                else{
-                    buttons[i].className = "button";
-                    images[i].style.display = "none";
-                }
+        index -= 1;
+        // 更换显示图片
+        console.log(index);
+        img.src = imgList[index];
+        // 修改样式
+        for (var i = 0; i < imgList.length; i++) {
+            if (i == index) {
+                buttons[i].className = "button_hover";
+            }
+            else {
+                buttons[i].className = "button";
             }
         }
     }
 </script>
-<body onload="changeImg()">
-<div id="box" onmouseover="chooseImg(event)">
-    <img src="http://i0.hdslb.com/u_user/f51850aed7f725c6ea1d6d08a0e2b42e.jpg">
-    <img src="http://i0.hdslb.com/group1/M00/B7/32/oYYBAFcoCvyAZZtIAADGFALQoE8555.jpg">
-    <img src="http://i0.hdslb.com/group1/M00/B7/2B/oYYBAFchdWqANKvhAADSRTExTd8863.jpg">
-    <img src="http://i2.hdslb.com/promote/429e2eeb51fe26c53c2e450bffd0ec14.jpg">
-    <br/>
-    <a class="button">1</a>
-    <a class="button">2</a>
-    <a class="button">3</a>
-    <a class="button">4</a>
-</div>
-</body>
-</html>
