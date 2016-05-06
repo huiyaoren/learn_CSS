@@ -65,10 +65,28 @@
     <a class="button" onmouseout="changeImg()">4</a>
     <span id="left" onclick="passImg(event)"></span>
     <span id="right" onclick="passImg(event)"></span>
+    <br/>
+    <br/>
+</div>
+<div id="blog">
+    <input id="text" type="text"/>
+    <input value="发表" type="button" onclick="sendBlog()">
+    <div>
+        <div></div>
+    </div>
 </div>
 </body>
 </html>
 <script>
+    function sendBlog(){
+        var texts = text.value;
+        var text_box = document.createElement("div");
+
+        text_box = text_box.createTextNode(texts);
+        console.log(text_box);
+        blog.insertBefore(text_box,blog.getElementsByTagName("div")[0]);
+    }
+
     var imgList = [
         "http://i0.hdslb.com/u_user/f51850aed7f725c6ea1d6d08a0e2b42e.jpg",
         "http://i0.hdslb.com/group1/M00/B7/32/oYYBAFcoCvyAZZtIAADGFALQoE8555.jpg",
@@ -98,6 +116,7 @@
 
         }
     }
+    
     function chooseImg(evt) {
         if (evt.target.className == "button_hover" || evt.target.className == "button") {
             var buttons = box.getElementsByTagName("a");
@@ -142,4 +161,5 @@
             }
         }
     }
+
 </script>

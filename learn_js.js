@@ -33,7 +33,7 @@ function Table() {
             for (var j = 0; j < this.row; j++) {
                 var td = document.createElement("td");
                 td.style.width = "50px";
-                td.style.height = "15px"
+                td.style.height = "15px";
                 tr.appendChild(td);
             }
             area.appendChild(tr);
